@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background: linear-gradient(to top right, #ffcccc, #ffe6e6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff3399;
+      font-size: 50px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    p {
+      color: #663399;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      background: #ff6699;
+      border-radius: 50% 50% 50% 50%;
+      position: relative;
+      margin: 20px auto;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .balloon::after {
+      content: "";
+      width: 2px;
+      height: 50px;
+      background: #333;
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes bounce {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎂 Happy Birthday! 🎉</h1>
+  <div class="balloon"></div>
+  <p>Wishing you joy, love, and laughter today and always!</p>
+
+  <script>
+    // Optional: Add music or popup message
+    setTimeout(() => {
+      alert("🎉 Surprise! Have an amazing birthday! 🎁");
+    }, 3000);
+  </script>
+
+</body>
+</html>
